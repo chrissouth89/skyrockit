@@ -69,7 +69,7 @@ router.post('/sign-in', async (req, res) => {
       username: userInDatabase.username,
       _id: userInDatabase._id
     };
-  
+    console.log(req.session.user)
     res.redirect('/');
   } catch (error) {
     console.log(error);
